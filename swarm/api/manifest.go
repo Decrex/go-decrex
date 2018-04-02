@@ -27,9 +27,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/log"
+	"github.com/decrx/go-decrx/swarm/storage"
 )
 
 const (

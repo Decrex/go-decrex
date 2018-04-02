@@ -21,17 +21,17 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/decrx/go-decrx/accounts"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/consensus"
+	"github.com/decrx/go-decrx/core"
+	"github.com/decrx/go-decrx/core/state"
+	"github.com/decrx/go-decrx/core/types"
+	"github.com/decrx/go-decrx/eth/downloader"
+	"github.com/decrx/go-decrx/ethdb"
+	"github.com/decrx/go-decrx/event"
+	"github.com/decrx/go-decrx/log"
+	"github.com/decrx/go-decrx/params"
 )
 
 // Backend wraps all methods required for mining.

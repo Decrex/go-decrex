@@ -23,10 +23,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/core"
+	"github.com/decrx/go-decrx/ethdb"
+	"github.com/decrx/go-decrx/params"
 )
 
 // Genesis block for nodes which don't care about the DAO fork (i.e. not configured)

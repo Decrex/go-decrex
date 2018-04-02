@@ -25,15 +25,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	ethereum "github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/params"
+	ethereum "github.com/decrx/go-decrx"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/core"
+	"github.com/decrx/go-decrx/core/types"
+	"github.com/decrx/go-decrx/ethdb"
+	"github.com/decrx/go-decrx/event"
+	"github.com/decrx/go-decrx/log"
+	"github.com/decrx/go-decrx/metrics"
+	"github.com/decrx/go-decrx/params"
 )
 
 var (

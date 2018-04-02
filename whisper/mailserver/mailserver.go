@@ -20,12 +20,12 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
-	whisper "github.com/ethereum/go-ethereum/whisper/whisperv6"
+	"github.com/decrx/go-decrx/cmd/utils"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/crypto"
+	"github.com/decrx/go-decrx/log"
+	"github.com/decrx/go-decrx/rlp"
+	whisper "github.com/decrx/go-decrx/whisper/whisperv6"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/util"
 )

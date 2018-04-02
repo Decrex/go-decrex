@@ -23,9 +23,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/decrx/go-decrx/common/math"
+	"github.com/decrx/go-decrx/core/types"
+	"github.com/decrx/go-decrx/params"
 )
 
 type diffTest struct {

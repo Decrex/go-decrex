@@ -25,14 +25,14 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/accounts/usbwallet"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
+	"github.com/decrx/go-decrx/accounts"
+	"github.com/decrx/go-decrx/accounts/keystore"
+	"github.com/decrx/go-decrx/accounts/usbwallet"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/crypto"
+	"github.com/decrx/go-decrx/log"
+	"github.com/decrx/go-decrx/p2p"
+	"github.com/decrx/go-decrx/p2p/discover"
 )
 
 const (

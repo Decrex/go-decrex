@@ -22,13 +22,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/common/mclock"
+	"github.com/decrx/go-decrx/consensus"
+	"github.com/decrx/go-decrx/core"
+	"github.com/decrx/go-decrx/core/types"
+	"github.com/decrx/go-decrx/light"
+	"github.com/decrx/go-decrx/log"
 )
 
 const (

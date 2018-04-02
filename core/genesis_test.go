@@ -22,11 +22,11 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/consensus/ethash"
+	"github.com/decrx/go-decrx/core/vm"
+	"github.com/decrx/go-decrx/ethdb"
+	"github.com/decrx/go-decrx/params"
 )
 
 func TestDefaultGenesisBlock(t *testing.T) {

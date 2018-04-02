@@ -24,12 +24,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/decrx/go-decrx"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/common/hexutil"
+	"github.com/decrx/go-decrx/core/types"
+	"github.com/decrx/go-decrx/rlp"
+	"github.com/decrx/go-decrx/rpc"
 )
 
 // Client defines typed wrappers for the Ethereum RPC API.
