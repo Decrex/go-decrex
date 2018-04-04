@@ -27,9 +27,9 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/crypto"
+	"github.com/decrx/go-decrx/rlp"
 )
 
 func init() {

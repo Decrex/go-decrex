@@ -20,10 +20,10 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/core/types"
+	"github.com/decrx/go-decrx/ethdb"
+	"github.com/decrx/go-decrx/params"
 	lru "github.com/hashicorp/golang-lru"
 )
 

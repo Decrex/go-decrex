@@ -23,17 +23,17 @@ import (
 	"math"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/les/flowcontrol"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discv5"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/core"
+	"github.com/decrx/go-decrx/core/types"
+	"github.com/decrx/go-decrx/eth"
+	"github.com/decrx/go-decrx/ethdb"
+	"github.com/decrx/go-decrx/les/flowcontrol"
+	"github.com/decrx/go-decrx/light"
+	"github.com/decrx/go-decrx/log"
+	"github.com/decrx/go-decrx/p2p"
+	"github.com/decrx/go-decrx/p2p/discv5"
+	"github.com/decrx/go-decrx/rlp"
 )
 
 type LesServer struct {

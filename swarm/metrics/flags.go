@@ -19,10 +19,10 @@ package metrics
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/log"
-	gethmetrics "github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/metrics/influxdb"
+	"github.com/decrx/go-decrx/cmd/utils"
+	"github.com/decrx/go-decrx/log"
+	gethmetrics "github.com/decrx/go-decrx/metrics"
+	"github.com/decrx/go-decrx/metrics/influxdb"
 	"gopkg.in/urfave/cli.v1"
 )
 

@@ -22,8 +22,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/crypto"
 )
 
 var seed int64

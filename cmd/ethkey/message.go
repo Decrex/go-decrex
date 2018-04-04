@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/decrx/go-decrx/accounts/keystore"
+	"github.com/decrx/go-decrx/cmd/utils"
+	"github.com/decrx/go-decrx/common"
+	"github.com/decrx/go-decrx/crypto"
 	"gopkg.in/urfave/cli.v1"
 )
 

@@ -27,13 +27,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/discv5"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/decrx/go-decrx/common/mclock"
+	"github.com/decrx/go-decrx/ethdb"
+	"github.com/decrx/go-decrx/log"
+	"github.com/decrx/go-decrx/p2p"
+	"github.com/decrx/go-decrx/p2p/discover"
+	"github.com/decrx/go-decrx/p2p/discv5"
+	"github.com/decrx/go-decrx/rlp"
 )
 
 const (

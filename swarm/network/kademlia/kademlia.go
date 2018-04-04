@@ -23,8 +23,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/decrx/go-decrx/log"
+	"github.com/decrx/go-decrx/metrics"
 )
 
 //metrics variables
