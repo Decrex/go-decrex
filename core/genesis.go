@@ -314,7 +314,7 @@ func DefaultGenesisBlock() *Genesis {
 		Config:     params.MainnetChainConfig,
 		Nonce:      26,
 		ExtraData:  hexutil.MustDecode("0x26"),
-		GasLimit:   22000,
+		GasLimit:   5000,
 		Difficulty: big.NewInt(2000000),
 	}
 }
@@ -325,7 +325,7 @@ func DefaultTestnetGenesisBlock() *Genesis {
 		Config:     params.TestnetChainConfig,
 		Nonce:      2626,
 		ExtraData:  hexutil.MustDecode("0x2626"),
-		GasLimit:   22000,
+		GasLimit:   5000,
 		Difficulty: big.NewInt(2000000),
 	}
 }
