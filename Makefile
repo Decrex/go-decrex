@@ -2,19 +2,19 @@
 # with Go source code. If you know what GOPATH is then you probably
 # don't need to bother with make.
 
-.PHONY: geth android ios geth-cross swarm evm all test clean
-.PHONY: geth-linux geth-linux-386 geth-linux-amd64 geth-linux-mips64 geth-linux-mips64le
-.PHONY: geth-linux-arm geth-linux-arm-5 geth-linux-arm-6 geth-linux-arm-7 geth-linux-arm64
-.PHONY: geth-darwin geth-darwin-386 geth-darwin-amd64
-.PHONY: geth-windows geth-windows-386 geth-windows-amd64
+.PHONY: decrx android ios decrx-cross swarm evm all test clean
+.PHONY: decrx-linux decrx-linux-386 decrx-linux-amd64 decrx-linux-mips64 decrx-linux-mips64le
+.PHONY: decrx-linux-arm decrx-linux-arm-5 decrx-linux-arm-6 decrx-linux-arm-7 decrx-linux-arm64
+.PHONY: decrx-darwin decrx-darwin-386 decrx-darwin-amd64
+.PHONY: decrx-windows decrx-windows-386 decrx-windows-amd64
 
 GOBIN = $(shell pwd)/build/bin
 GO ?= latest
 
-geth:
-	build/env.sh go run build/ci.go install ./cmd/geth
+decrx:
+	build/env.sh go run build/ci.go install ./cmd/decrx
 	@echo "Done building."
-	@echo "Run \"$(GOBIN)/geth\" to launch geth."
+	@echo "Run \"$(GOBIN)/decrx\" to launch decrx."
 
 swarm:
 	build/env.sh go run build/ci.go install ./cmd/swarm
@@ -27,12 +27,12 @@ all:
 android:
 	build/env.sh go run build/ci.go aar --local
 	@echo "Done building."
-	@echo "Import \"$(GOBIN)/geth.aar\" to use the library."
+	@echo "Import \"$(GOBIN)/decrx.aar\" to use the library."
 
 ios:
 	build/env.sh go run build/ci.go xcode --local
 	@echo "Done building."
-	@echo "Import \"$(GOBIN)/Geth.framework\" to use the library."
+	@echo "Import \"$(GOBIN)/decrx.framework\" to use the library."
 
 test: all
 	build/env.sh go run build/ci.go test
@@ -55,92 +55,92 @@ devtools:
 
 # Cross Compilation Targets (xgo)
 
-geth-cross: geth-linux geth-darwin geth-windows geth-android geth-ios
+decrx-cross: decrx-linux decrx-darwin decrx-windows decrx-android decrx-ios
 	@echo "Full cross compilation done:"
-	@ls -ld $(GOBIN)/geth-*
+	@ls -ld $(GOBIN)/decrx-*
 
-geth-linux: geth-linux-386 geth-linux-amd64 geth-linux-arm geth-linux-mips64 geth-linux-mips64le
+decrx-linux: decrx-linux-386 decrx-linux-amd64 decrx-linux-arm decrx-linux-mips64 decrx-linux-mips64le
 	@echo "Linux cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-*
+	@ls -ld $(GOBIN)/decrx-linux-*
 
-geth-linux-386:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/386 -v ./cmd/geth
+decrx-linux-386:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/386 -v ./cmd/decrx
 	@echo "Linux 386 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep 386
+	@ls -ld $(GOBIN)/decrx-linux-* | grep 386
 
-geth-linux-amd64:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/amd64 -v ./cmd/geth
+decrx-linux-amd64:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/amd64 -v ./cmd/decrx
 	@echo "Linux amd64 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep amd64
+	@ls -ld $(GOBIN)/decrx-linux-* | grep amd64
 
-geth-linux-arm: geth-linux-arm-5 geth-linux-arm-6 geth-linux-arm-7 geth-linux-arm64
+decrx-linux-arm: decrx-linux-arm-5 decrx-linux-arm-6 decrx-linux-arm-7 decrx-linux-arm64
 	@echo "Linux ARM cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep arm
+	@ls -ld $(GOBIN)/decrx-linux-* | grep arm
 
-geth-linux-arm-5:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/arm-5 -v ./cmd/geth
+decrx-linux-arm-5:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/arm-5 -v ./cmd/decrx
 	@echo "Linux ARMv5 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep arm-5
+	@ls -ld $(GOBIN)/decrx-linux-* | grep arm-5
 
-geth-linux-arm-6:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/arm-6 -v ./cmd/geth
+decrx-linux-arm-6:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/arm-6 -v ./cmd/decrx
 	@echo "Linux ARMv6 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep arm-6
+	@ls -ld $(GOBIN)/decrx-linux-* | grep arm-6
 
-geth-linux-arm-7:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/arm-7 -v ./cmd/geth
+decrx-linux-arm-7:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/arm-7 -v ./cmd/decrx
 	@echo "Linux ARMv7 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep arm-7
+	@ls -ld $(GOBIN)/decrx-linux-* | grep arm-7
 
-geth-linux-arm64:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/arm64 -v ./cmd/geth
+decrx-linux-arm64:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/arm64 -v ./cmd/decrx
 	@echo "Linux ARM64 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep arm64
+	@ls -ld $(GOBIN)/decrx-linux-* | grep arm64
 
-geth-linux-mips:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/mips --ldflags '-extldflags "-static"' -v ./cmd/geth
+decrx-linux-mips:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/mips --ldflags '-extldflags "-static"' -v ./cmd/decrx
 	@echo "Linux MIPS cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep mips
+	@ls -ld $(GOBIN)/decrx-linux-* | grep mips
 
-geth-linux-mipsle:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/mipsle --ldflags '-extldflags "-static"' -v ./cmd/geth
+decrx-linux-mipsle:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/mipsle --ldflags '-extldflags "-static"' -v ./cmd/decrx
 	@echo "Linux MIPSle cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep mipsle
+	@ls -ld $(GOBIN)/decrx-linux-* | grep mipsle
 
-geth-linux-mips64:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/mips64 --ldflags '-extldflags "-static"' -v ./cmd/geth
+decrx-linux-mips64:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/mips64 --ldflags '-extldflags "-static"' -v ./cmd/decrx
 	@echo "Linux MIPS64 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep mips64
+	@ls -ld $(GOBIN)/decrx-linux-* | grep mips64
 
-geth-linux-mips64le:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/mips64le --ldflags '-extldflags "-static"' -v ./cmd/geth
+decrx-linux-mips64le:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=linux/mips64le --ldflags '-extldflags "-static"' -v ./cmd/decrx
 	@echo "Linux MIPS64le cross compilation done:"
-	@ls -ld $(GOBIN)/geth-linux-* | grep mips64le
+	@ls -ld $(GOBIN)/decrx-linux-* | grep mips64le
 
-geth-darwin: geth-darwin-386 geth-darwin-amd64
+decrx-darwin: decrx-darwin-386 decrx-darwin-amd64
 	@echo "Darwin cross compilation done:"
-	@ls -ld $(GOBIN)/geth-darwin-*
+	@ls -ld $(GOBIN)/decrx-darwin-*
 
-geth-darwin-386:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=darwin/386 -v ./cmd/geth
+decrx-darwin-386:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=darwin/386 -v ./cmd/decrx
 	@echo "Darwin 386 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-darwin-* | grep 386
+	@ls -ld $(GOBIN)/decrx-darwin-* | grep 386
 
-geth-darwin-amd64:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=darwin/amd64 -v ./cmd/geth
+decrx-darwin-amd64:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=darwin/amd64 -v ./cmd/decrx
 	@echo "Darwin amd64 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-darwin-* | grep amd64
+	@ls -ld $(GOBIN)/decrx-darwin-* | grep amd64
 
-geth-windows: geth-windows-386 geth-windows-amd64
+decrx-windows: decrx-windows-386 decrx-windows-amd64
 	@echo "Windows cross compilation done:"
-	@ls -ld $(GOBIN)/geth-windows-*
+	@ls -ld $(GOBIN)/decrx-windows-*
 
-geth-windows-386:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=windows/386 -v ./cmd/geth
+decrx-windows-386:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=windows/386 -v ./cmd/decrx
 	@echo "Windows 386 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-windows-* | grep 386
+	@ls -ld $(GOBIN)/decrx-windows-* | grep 386
 
-geth-windows-amd64:
-	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=windows/amd64 -v ./cmd/geth
+decrx-windows-amd64:
+	build/env.sh go run build/ci.go xgo -- --go=$(GO) --targets=windows/amd64 -v ./cmd/decrx
 	@echo "Windows amd64 cross compilation done:"
-	@ls -ld $(GOBIN)/geth-windows-* | grep amd64
+	@ls -ld $(GOBIN)/decrx-windows-* | grep amd64
